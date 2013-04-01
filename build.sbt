@@ -1,5 +1,24 @@
-name := "sbt_Test"
+name := "woen1"
 
-libraryDependencies += "com.google.inject" % "guice" % "3.0"
+version := "0.1"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.8" % "test"
+
+libraryDependencies  ++= Seq(
+            // other dependencies here
+            // pick and choose:
+            "org.scalanlp" %% "breeze-math" % "0.2",
+            "org.scalanlp" %% "breeze-learn" % "0.2",
+            "org.scalanlp" %% "breeze-process" % "0.2",
+            "org.scalanlp" %% "breeze-viz" % "0.2"
+)
+
+libraryDependencies += "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
+
+resolvers ++= Seq(
+            // other resolvers here
+            // if you want to use snapshot builds (currently 0.3-SNAPSHOT), use this.
+            "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
+)
+
+// Scala 2.9.2 is still supported for 0.2, but is dropped afterwards.
+scalaVersion := "2.10.1"
