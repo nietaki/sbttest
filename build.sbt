@@ -6,13 +6,15 @@ version := "0.1"
 libraryDependencies  ++= Seq(
             // other dependencies here
             // pick and choose:
-            "org.scalanlp" %% "breeze-math" % "0.2",
-            "org.scalanlp" %% "breeze-learn" % "0.2",
-            "org.scalanlp" %% "breeze-process" % "0.2",
-            "org.scalanlp" %% "breeze-viz" % "0.2"
+            //"org.scalanlp" %% "breeze-math" % "0.2",
+            //"org.scalanlp" %% "breeze-learn" % "0.2",
+            //"org.scalanlp" %% "breeze-process" % "0.2",
+            //"org.scalanlp" %% "breeze-viz" % "0.2"
 )
 
-libraryDependencies += "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
+//libraryDependencies += "org.scalautils" % "scalautils_2.10" % "2.0"
+libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0" % "test"
+
 
 resolvers ++= Seq(
             // other resolvers here
@@ -20,5 +22,4 @@ resolvers ++= Seq(
             "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 )
 
-// Scala 2.9.2 is still supported for 0.2, but is dropped afterwards.
-scalaVersion := "2.10.1"
+scalaVersion := "2.10.3"
